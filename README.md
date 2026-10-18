@@ -1,5 +1,7 @@
 # Quran Island
 
+[![CI](https://github.com/AymanBAHHOU/quran-island/actions/workflows/ci.yml/badge.svg)](https://github.com/AymanBAHHOU/quran-island/actions/workflows/ci.yml)
+
 **An iPhone-style Dynamic Island for your Windows desktop that plays the Quran.**
 
 > **Work in progress.** Nothing plays yet: this is the very first scaffolding (milestone M0).

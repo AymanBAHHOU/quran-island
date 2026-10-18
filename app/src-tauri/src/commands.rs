@@ -6,5 +6,6 @@
 /// The app version from `Cargo.toml`, e.g. "0.1.0".
 #[tauri::command]
 pub fn app_version() -> &'static str {
+    let x = 5;
     env!("CARGO_PKG_VERSION")
 }

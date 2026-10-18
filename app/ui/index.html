@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Quran Island</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="island" class="island">
+      <!-- Compact pill: always visible -->
+      <div class="pill">
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="pill-title" dir="rtl" lang="ar">الفاتحة</span>
+      </div>
+
+      <!-- Expanded view: shown while the mouse is over the island -->
+      <div class="expanded">
+        <div class="now-playing">
+          <span class="surah-name">Al-Fatihah</span>
+          <span class="reciter">Mishary Rashid Alafasy</span>
+        </div>
+        <p class="note">Playback arrives in M1 · <span id="version"></span></p>
+      </div>
+    </div>
+  </body>
+</html>

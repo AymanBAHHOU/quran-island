@@ -1,0 +1,12 @@
+[package]
+name = "quran-core"
+description = "Pure domain logic for Quran Island: surahs, verse keys, playlists. No I/O."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

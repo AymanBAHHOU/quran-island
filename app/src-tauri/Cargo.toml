@@ -1,0 +1,18 @@
+[package]
+name = "quran-island"
+description = "A Dynamic Island for your desktop that plays the Quran."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+quran-core = { workspace = true }
+quran-data = { workspace = true }
+quran-audio = { workspace = true }

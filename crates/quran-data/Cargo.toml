@@ -1,0 +1,10 @@
+[package]
+name = "quran-data"
+description = "Network and disk access for Quran Island: APIs, audio URLs, cache."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+quran-core = { workspace = true }

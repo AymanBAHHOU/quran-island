@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "What the island window's JavaScript is allowed to do.",
+  "windows": ["island"],
+  "permissions": ["core:default"]
+}

@@ -1,0 +1,119 @@
+:root {
+  --island-bg: #000;
+  --text: #f5f5f7;
+  --muted: #8e8e93;
+  --accent: #30d158;
+  --pill-w: 190px;
+  --pill-h: 36px;
+  --open-w: 360px;
+  --open-h: 112px;
+  --spring: cubic-bezier(0.32, 1.25, 0.5, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* The window is transparent: only the island itself is drawn. */
+html,
+body {
+  background: transparent;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.island {
+  width: var(--pill-w);
+  height: var(--pill-h);
+  border-radius: calc(var(--pill-h) / 2);
+  background: var(--island-bg);
+  overflow: hidden;
+  transition:
+    width 0.45s var(--spring),
+    height 0.45s var(--spring),
+    border-radius 0.45s var(--spring);
+}
+
+.island:hover {
+  width: var(--open-w);
+  height: var(--open-h);
+  border-radius: 28px;
+}
+
+.pill {
+  height: var(--pill-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.pill-title {
+  font-size: 15px;
+}
+
+/* Little equalizer bars, animated for now as a placeholder. */
+.bars {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  height: 14px;
+}
+
+.bars i {
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent);
+  animation: bar 1s ease-in-out infinite;
+}
+
+.bars i:nth-child(2) { animation-delay: -0.3s; }
+.bars i:nth-child(3) { animation-delay: -0.6s; }
+.bars i:nth-child(4) { animation-delay: -0.15s; }
+
+@keyframes bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.expanded {
+  padding: 4px 20px 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.island:hover .expanded {
+  opacity: 1;
+  transition-delay: 0.15s;
+}
+
+.now-playing {
+  display: flex;
+  flex-direction: column;
+}
+
+.surah-name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.reciter,
+.note {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.note {
+  margin-top: 10px;
+}
